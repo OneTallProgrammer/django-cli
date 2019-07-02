@@ -5,8 +5,8 @@
 	</head>
 
 	<body>
-		{{ command }}	
+		{% for cmd in commands %}
+			<p>{{ cmd }}</p>	
+		{% endfor %}
 	</body>
-
-
 </html>
