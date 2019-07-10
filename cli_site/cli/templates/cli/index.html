@@ -2,9 +2,19 @@
 
 <html>
 	<head>
+		{% load static %}
+		<link rel = "stylesheet" type = "text/css" href = {% static "css/brdstyle.css" %} /> 
+		<script src="{% static "js/jquery.js" %}"></script>
+		<script src="{% static "js/brdapp.js" %}"></script>
 	</head>
 
 	<body>
+		<div id = "background">
+    			<div id = "console">
+        			<div id = "consoletext"></div>
+        			<textarea rows = "1" id = "textinput" onkeydown = "sendCommand();"></textarea>
+    			</div>
+		</div>
 		{% for cmd in commands %}
 			<p>{{ cmd }}</p>	
 		{% endfor %}
